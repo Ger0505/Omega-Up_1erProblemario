@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>  
+int main(){
+	int N,i,j,inicio,aux=0,R,cont=0;
+	do{
+		scanf("%i\n %i",&N,&i);
+	}while(i<1 | i>1000000);
+	scanf("%i",&R);
+	inicio=R;
+	aux=R;
+	for(j=0;j<(i-1);j++){
+		do{
+			scanf("%i",&R); 
+		}while(R<1 | R>1000000);
+		if((R+aux)%N==0){
+			cont++;
+		}
+		aux=R;
+	}
+	if((inicio+aux)%N==0){
+		cont++;
+	}
+	printf("%i",cont);
+	
+}

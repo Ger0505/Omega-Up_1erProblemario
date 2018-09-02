@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <math.h>  
+#include <stdlib.h>
+#include <string.h>
+int main(){
+	char busqueda[100],palabras[100],*mallor;
+	int c=0,i,j,word,len,lon,aux=0,mayor=0;
+	scanf("%s\n%i",&busqueda,&word);
+	lon=strlen(busqueda);
+	//con=malloc(sizeof(int)*word);
+	do{
+		scanf("%s",&palabras);
+		len=strlen(palabras);
+		for(i=0;i<lon;i++){
+			for(j=0;j<len;j++){
+				if(busqueda[i]==palabras[j]){
+					c++;
+				}
+	    	}
+		}
+		for(i=0;i<(lon-1);i++){
+			for(j=0;j<len;j++){
+				if((busqueda[i]==palabras[j]) && (busqueda[i+1]==palabras[j+1])  ){
+					c++;
+				}
+	    	}
+		}
+			for(i=0;i<(lon-2);i++){
+			for(j=0;j<len;j++){
+				if((busqueda[i]==palabras[j]) && (busqueda[i+1]==palabras[j+1]) && (busqueda[i+2]==palabras[j+2])){
+					c++;
+				}
+	    	}
+		}
+		if(c>mayor){
+			mayor=c;
+			mallor=malloc(sizeof(char)*len);
+			strcpy(mallor,palabras);
+		}
+		aux++;
+		c=0;
+	}while(aux!=word);
+	printf("%s",mallor);
+    return 1;
+}

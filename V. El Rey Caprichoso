@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main(){
+	int N,i,j,a[1000000],max=0,aux1=0,cont=0,m=0,MCM;
+	scanf("%i",&N);
+	for (i=0;i<N;i++){
+		scanf("%i",&a[i]);
+		if (a[i]>max){
+			max=a[i];
+		}
+	}
+	do{
+	    cont=0;
+		m++;
+		MCM=max*m;
+		for (i=0;i<N;i++){
+			if(MCM%a[i]==0){
+				cont++;
+			}
+		}
+		if(cont==N){
+			printf("%i",MCM);
+			return 0;
+		}
+	}while(cont!=N);
+}

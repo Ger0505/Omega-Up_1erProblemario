@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>  
+int Sumar(int Mi){
+	int suma=0;
+	do{
+		suma+=(Mi%10);
+		Mi=(Mi/10);
+	}while(Mi!=0);
+	return suma;
+}
+int main(){
+	int M,Mi,cont,i,j,suma;
+	scanf("%i",&M);
+	for(i=0;i<M;i++){
+		suma=cont=0;
+		scanf("%i",&Mi);
+		suma=Sumar(Mi);
+		for(j=2;j<=suma;j++){
+			(suma%j)==0 ? cont++:(cont=cont);
+		}
+		cont==1 ? printf("UltraPrimo\n"):printf("No UltraPrimo\n");
+	}
+}

@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+	int A,B,C,X,Y,Z;
+	do{
+		scanf("%i %i %i %i %i %i",&A,&B,&C,&X,&Y,&Z);
+	}while(A<1 | A>1000 |B<1 | B>1000 |C<1 | C>1000 |X<1 | X>1000 |Y<1 | Y>1000 |Z<1 | Z>1000 );
+	if((A*B*C)<(X*Y*Z)){
+		printf("%i",1);
+	}else{
+		printf("%i",0);
+	}
+	
+}

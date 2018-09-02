@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+	int p,s,r,d=0,aux=0;
+	do{
+		scanf("%i %i %i",&p,&s,&r);
+	}while(s<r | p<1 | p>1000000 | s<1 | s>1000000 | r<1 | r>1000000);
+	
+	do{
+		aux=aux+s;
+		if(aux>=p){
+			d++;
+		}else{
+			aux=aux-r;
+			d++;
+		}
+	}while(aux<p);
+	printf("%i",d);
+}

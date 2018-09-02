@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>  
+#include <stdlib.h>
+#include <string.h>
+int main(){
+	int *b,I,F,aux=0,longitud,i,len,j;
+	char texto[100],*a;
+	do{
+		scanf("%i %i",&I,&F);
+	}while(I<0);
+	fflush(stdin);
+	gets(texto);
+	len=F-I+1;
+	a=malloc(len*sizeof(char));
+//	b=malloc(N*sizeof(int));
+     longitud=strlen(texto);
+	for(i=0;i<longitud;i++){
+		if(i==I){
+			while(aux<=F){
+			a[len-1-aux]=texto[i+aux];
+			aux++;
+			}
+		}
+	}
+	for(i=0;i<longitud;i++){
+		if(i>=I && i<=F){
+			texto[i]=a[i];
+		}
+	}
+	for(i=0;i<longitud;i++){
+		printf("%c",texto[i]);
+	}
+	
+}

@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(){
+	int M,N;
+	
+	do{
+		scanf("%i %i",&M,&N);
+	}while(M<-1000 | M>1000 | N<-1000 | N>1000 );
+	printf("%i",abs(M+N));
+}

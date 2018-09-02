@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+	int c1,c2,c3,suma=0;
+	scanf("%i",&c1);
+	suma+=c1;
+	scanf("%i",&c2);
+	suma+=c2;
+	scanf("%i",&c3);
+	suma+=c3;
+	if((suma/3)>=6){
+		printf("%i",1);
+	}else{
+		printf("%i",0);
+	}
+	
+}

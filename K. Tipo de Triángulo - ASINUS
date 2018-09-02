@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+	int a,b,c;
+	do{
+		scanf("%i %i %i",&a,&b,&c);
+	}while(a<0 | a>180 | b<0 | b>180| c<0 | c>180);
+	if(a==60 && b==60 && c==60){
+		printf("EQUILATERO");
+	}else if ((a==b | a==c | b==c) && ((a+b+c)==180)){
+		printf("ISOSCELES");
+	}else if((a+b+c)==180){
+		printf("ESCALENO");
+	}else{
+		printf("ERROR");
+	}
+}

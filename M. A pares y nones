@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+	int A=0,No=0,N,r,i,contA=0,contN=0;
+	scanf("%i",&N);
+	for(i=0;i<N;i++){
+		scanf("%i",&r);
+		if(r%2==0){
+			A+=r;
+			contA++;
+		}else{
+			No+=r;
+			contN++;
+		}
+	}
+	A=A/contA;
+	No=No/contN;
+	if(A>No){
+		printf("APARICIO");
+	}else if(A==No){
+		printf("EMPATE!");
+	}else{
+		printf("NONILA");
+	}
+}

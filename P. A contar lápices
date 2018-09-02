@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>  
+#include <stdlib.h>
+int main(){
+	int N,K,R,i,cont=0;
+	scanf("%i %i",&N,&K);
+	for(i=0;i<N;i++){
+		scanf("%i",&R);
+		if(R==K){
+			cont++;
+		}
+	}
+	printf("%i",cont);
+	
+}

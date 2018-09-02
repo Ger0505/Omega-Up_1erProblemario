@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+	int N,i,*M,cont=0,aux=0;
+	scanf("%i",&N);
+	M=malloc(N*sizeof(int));
+	for(i=0;i<N;i++){
+		scanf("%i",&M[i]);
+	}
+	do{
+		if(M[0]> M[aux])
+			cont++;
+		aux++;
+	}while(aux!=N);
+	printf("%i",cont);
+}

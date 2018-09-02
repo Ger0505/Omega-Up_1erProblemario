@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+	int a,b,c;
+	do{
+		scanf("%i %i %i",&a,&b,&c);
+	}while(a<1 | a>32000 | b<1 | b>32000| c<1 | c>32000);
+	if(a>b && a>c){
+		printf("El numero mayor es %i",a);
+	}else if(b>c){
+		printf("El numero mayor es %i",b);
+	}else{
+		printf("El numero mayor es %i",c);
+	}
+	
+}

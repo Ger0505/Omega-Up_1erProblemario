@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+	int A,B,C,D,h,min;
+	scanf("%i %i %i %i",&A,&B,&C,&D);
+	if(A<=C){
+		h=C-A;
+	}else{
+		h=(24-A)+C;
+	}
+	if(B<=D){
+		min=D-B;
+	}else{
+		min=60-(B-D);
+	}
+	printf("%i\n%i",h,min);
+	
+}
